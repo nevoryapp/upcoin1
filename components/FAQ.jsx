@@ -47,8 +47,8 @@ export default function FAQ({ isMobile }) {
   ];
 
   return (
-    <section className="py-16 px-4 bg-dark-900">
-      <div className="max-w-4xl mx-auto">
+    <section className="section bg-dark-900">
+      <div className="container-app max-w-4xl">
         <motion.h2 
           className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-primary bg-clip-text text-transparent"
           initial={{ opacity: 0, y: 20 }}
@@ -110,7 +110,7 @@ export default function FAQ({ isMobile }) {
           transition={{ duration: 0.5 }}
         >
           <h3 className="text-2xl font-bold mb-6">AINDA TEM DÚVIDAS?</h3>
-          <button className="btn-primary">
+          <button className="btn-primary animate-glow">
             FALAR COM NOSSO TIME
           </button>
         </motion.div>

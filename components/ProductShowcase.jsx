@@ -34,7 +34,7 @@ export default function ProductShowcase({ isMobile }) {
   ];
 
   return (
-    <section className="py-16 px-4 bg-dark-800">
+    <section className="section bg-dark-800">
       <div className="max-w-6xl mx-auto">
         <motion.h2 
           className="text-3xl md:text-4xl font-bold text-center mb-4 bg-gradient-primary bg-clip-text text-transparent"
@@ -56,7 +56,7 @@ export default function ProductShowcase({ isMobile }) {
           Um guia completo dividido em 6 capítulos estratégicos
         </motion.p>
 
-        <div className="flex flex-col lg:flex-row gap-8 items-center">
+        <div className="container-app flex flex-col lg:flex-row gap-8 items-center">
           {/* Mockup do Ebook */}
           <motion.div 
             className="flex-1 flex justify-center"
@@ -66,10 +66,10 @@ export default function ProductShowcase({ isMobile }) {
             transition={{ duration: 0.5 }}
           >
             <div className="relative">
-              <div className="w-64 h-80 md:w-80 md:h-96 bg-gradient-primary rounded-2xl shadow-2xl transform rotate-3"></div>
-              <div className="absolute inset-0 w-64 h-80 md:w-80 md:h-96 bg-dark-700 rounded-2xl shadow-2xl transform -rotate-3 flex items-center justify-center">
+              <div className="w-64 h-80 md:w-80 md:h-96 bg-gradient-primary rounded-2xl shadow-soft-lg transform rotate-3"></div>
+              <div className="absolute inset-0 w-64 h-80 md:w-80 md:h-96 bg-dark-700 rounded-2xl shadow-soft-lg transform -rotate-3 flex items-center justify-center">
                 <div className="text-center p-6">
-                  <div className="bg-dark-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="bg-dark-900 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-soft">
                     <svg className="w-8 h-8 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                     </svg>
@@ -93,7 +93,7 @@ export default function ProductShowcase({ isMobile }) {
               {chapters.map((chapter, index) => (
                 <div 
                   key={index}
-                  className={`card-glass p-6 cursor-pointer transition-all duration-300 ${
+                  className={`card-glass p-6 cursor-pointer transition-all duration-300 hover:shadow-soft ${
                     activeChapter === index ? 'ring-2 ring-primary-500' : ''
                   }`}
                   onClick={() => setActiveChapter(index)}
@@ -124,7 +124,7 @@ export default function ProductShowcase({ isMobile }) {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <button className="btn-primary">
+          <button className="btn-primary animate-glow">
             GARANTA SEU EBOOK AGORA
           </button>
         </motion.div>

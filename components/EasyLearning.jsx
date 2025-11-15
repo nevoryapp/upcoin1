@@ -52,14 +52,14 @@ export default function EasyLearning() {
   };
 
   return (
-    <section className="py-20 px-4 bg-dark-800 relative overflow-hidden">
+    <section className="section bg-dark-800">
       {/* Efeitos de fundo */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary-500 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-500 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="container-app">
         <motion.h2 
           className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-primary bg-clip-text text-transparent"
           initial={{ opacity: 0, y: 20 }}
@@ -114,7 +114,7 @@ export default function EasyLearning() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <motion.button
-            className="btn-primary text-xl px-12 py-4"
+            className="btn-primary text-xl px-12 py-4 animate-glow"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={redirectToCheckout}

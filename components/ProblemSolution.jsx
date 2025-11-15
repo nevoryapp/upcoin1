@@ -30,8 +30,8 @@ export default function ProblemSolution({ isMobile }) {
   ];
 
   return (
-    <section className="py-16 px-4 bg-dark-800">
-      <div className="max-w-4xl mx-auto">
+    <section className="section bg-dark-800">
+      <div className="container-app max-w-4xl">
         <motion.h2 
           className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-primary bg-clip-text text-transparent"
           initial={{ opacity: 0, y: 20 }}
@@ -94,7 +94,7 @@ export default function ProblemSolution({ isMobile }) {
           <p className="text-xl text-primary-500 font-semibold mb-8">
             O UPCOIN: O Segredo das Criptos é o guia definitivo para você dominar o mundo das criptomoedas.
           </p>
-          <button className="btn-primary">
+          <button className="btn-primary animate-glow">
             DESCUBRA O SEGREDO AGORA
           </button>
         </motion.div>

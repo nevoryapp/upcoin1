@@ -78,14 +78,14 @@ export default function CryptoQuiz() {
   };
 
   return (
-    <section className="py-16 px-4 bg-dark-800 relative overflow-hidden">
+    <section className="section bg-dark-800">
       {/* Efeitos de fundo */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-64 h-64 bg-primary-500 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-primary-500 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-4xl mx-auto relative z-10">
+      <div className="container-app max-w-4xl">
         <motion.h2 
           className="text-3xl md:text-4xl font-bold text-center mb-4 bg-gradient-primary bg-clip-text text-transparent"
           initial={{ opacity: 0, y: 20 }}
@@ -193,7 +193,7 @@ export default function CryptoQuiz() {
                   </ul>
                   
                   <motion.button
-                    className="btn-primary w-full"
+                    className="btn-primary w-full animate-glow"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={redirectToCheckout}

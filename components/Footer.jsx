@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 export default function Footer({ isMobile }) {
   return (
-    <footer className="py-8 px-4 bg-dark-900 border-t border-dark-700">
-      <div className="max-w-6xl mx-auto">
+    <footer className="py-8 bg-dark-900 border-t border-dark-700">
+      <div className="container-app">
         <div className="text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

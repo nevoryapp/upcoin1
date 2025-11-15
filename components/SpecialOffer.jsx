@@ -34,7 +34,7 @@ export default function SpecialOffer({ isMobile }) {
   }, []);
 
   return (
-    <section className="py-16 px-4 bg-gradient-primary relative overflow-hidden">
+    <section className="section bg-gradient-primary">
       {/* Elementos decorativos */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-24 h-24 border-2 border-white rounded-full"></div>
@@ -42,7 +42,7 @@ export default function SpecialOffer({ isMobile }) {
         <div className="absolute top-1/3 right-1/4 w-12 h-12 border-2 border-white rounded-full"></div>
       </div>
 
-      <div className="max-w-4xl mx-auto relative z-10">
+      <div className="container-app max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -136,27 +136,12 @@ export default function SpecialOffer({ isMobile }) {
           className="text-center"
         >
           <motion.button 
-            className="bg-dark-900 text-white font-bold py-6 px-12 rounded-full text-xl hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 relative overflow-hidden"
+            className="btn-primary text-xl px-12 py-6 animate-glow"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            animate={{
-              boxShadow: [
-                "0 0 0 0 rgba(0, 0, 0, 0.3)",
-                "0 0 0 15px rgba(0, 0, 0, 0)",
-                "0 0 0 0 rgba(0, 0, 0, 0)",
-              ],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-            }}
             onClick={redirectToCheckout}
           >
-            <span className="relative z-10">COMEÇAR A APRENDER AGORA</span>
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-600 opacity-0"
-              whileHover={{ opacity: 0.2 }}
-            />
+            COMEÇAR A APRENDER AGORA
           </motion.button>
           
           {/* Elementos de confiança - sem distrair do CTA */}

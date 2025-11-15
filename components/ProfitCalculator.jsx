@@ -42,14 +42,14 @@ export default function ProfitCalculator() {
   ];
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-br from-dark-900 to-dark-800 relative overflow-hidden">
+    <section className="section bg-gradient-to-br from-dark-900 to-dark-800">
       {/* Efeitos de fundo */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-500 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="container-app">
         <motion.h2 
           className="text-3xl md:text-4xl font-bold text-center mb-4 bg-gradient-primary bg-clip-text text-transparent"
           initial={{ opacity: 0, y: 20 }}
@@ -131,7 +131,7 @@ export default function ProfitCalculator() {
               </div>
               
               <motion.button
-                className="btn-primary w-full py-4 relative"
+                className="btn-primary w-full py-4 relative animate-glow"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={calculateProfit}
@@ -254,7 +254,7 @@ export default function ProfitCalculator() {
                 Nosso ebook ensina exatamente como replicar esses resultados com segurança
               </p>
               <motion.button
-                className="btn-primary w-full py-4"
+                className="btn-primary w-full py-4 animate-glow"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={redirectToCheckout}

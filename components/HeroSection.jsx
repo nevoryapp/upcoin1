@@ -57,7 +57,7 @@ export default function HeroSection({ isMobile }) {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-dark-900 to-dark-800 px-4 py-16">
+    <section className="section min-h-screen bg-gradient-to-br from-dark-900 to-dark-800">
       {/* Partículas de fundo melhoradas */}
       <div className="absolute inset-0 z-0">
         {[...Array(20)].map((_, i) => (
@@ -108,7 +108,7 @@ export default function HeroSection({ isMobile }) {
         </motion.div>
       )}
 
-      <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto">
+      <div className="container-app flex flex-col items-center text-center max-w-4xl">
         <motion.h1 
           className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent"
           initial={{ opacity: 0, y: 20 }}
@@ -140,27 +140,16 @@ export default function HeroSection({ isMobile }) {
         >
           {/* Botão CTA principal com destaque */}
           <motion.button 
-            className="btn-primary mb-6 relative text-lg px-10 py-5"
+            className="btn-primary mb-6 relative text-lg px-10 py-5 animate-glow shadow-soft"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            animate={{
-              boxShadow: [
-                "0 0 0 0 rgba(255, 107, 0, 0.7)",
-                "0 0 0 15px rgba(255, 107, 0, 0)",
-                "0 0 0 0 rgba(255, 107, 0, 0)",
-              ],
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-            }}
             onClick={redirectToCheckout}
           >
             QUERO APRENDER AGORA
           </motion.button>
           
           {/* Badge de confiança */}
-          <div className="inline-flex items-center gap-2 bg-dark-700 px-4 py-2 rounded-full">
+          <div className="badge">
             <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
             </svg>

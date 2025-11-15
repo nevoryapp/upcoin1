@@ -66,14 +66,14 @@ export default function Benefits({ isMobile }) {
   };
 
   return (
-    <section className="py-20 px-4 bg-dark-900 relative overflow-hidden">
+    <section className="section bg-dark-900">
       {/* Efeitos de fundo sutis */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-500 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="container-app">
         <motion.h2 
           className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-primary bg-clip-text text-transparent"
           initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,7 @@ export default function Benefits({ isMobile }) {
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
-              className="card-glass p-8 flex flex-col items-center text-center h-full group hover:scale-105 transition-all duration-300"
+              className="card-glass p-8 flex flex-col items-center text-center h-full group hover:scale-105 hover:shadow-soft-lg transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -106,7 +106,7 @@ export default function Benefits({ isMobile }) {
               whileHover={{ y: -10 }}
             >
               <div className="mb-6">
-                <div className="w-20 h-20 bg-dark-700 rounded-2xl flex items-center justify-center group-hover:bg-primary-500 transition-all duration-300">
+                <div className="w-20 h-20 bg-dark-700 rounded-2xl flex items-center justify-center group-hover:bg-primary-500 transition-all duration-300 shadow-soft">
                   {benefit.icon}
                 </div>
               </div>
@@ -125,7 +125,7 @@ export default function Benefits({ isMobile }) {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <motion.button
-            className="btn-primary text-xl px-12 py-4"
+            className="btn-primary text-xl px-12 py-4 animate-glow"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={redirectToCheckout}

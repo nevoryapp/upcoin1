@@ -20,8 +20,8 @@ export default function TrustElements() {
   ];
 
   return (
-    <section className="py-12 px-4 bg-dark-900 border-y border-dark-700">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-12 bg-dark-900 border-y border-dark-700">
+      <div className="container-app">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Selos de Confiança */}
           <div>

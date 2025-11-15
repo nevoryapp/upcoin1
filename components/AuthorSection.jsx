@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 export default function AuthorSection({ isMobile }) {
   return (
-    <section className="py-16 px-4 bg-dark-800">
-      <div className="max-w-6xl mx-auto">
+    <section className="section bg-dark-800">
+      <div className="container-app">
         <motion.h2 
           className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-primary bg-clip-text text-transparent"
           initial={{ opacity: 0, y: 20 }}
@@ -67,7 +67,7 @@ export default function AuthorSection({ isMobile }) {
               </div>
             </div>
 
-            <button className="btn-primary">
+            <button className="btn-primary animate-glow">
               CONHECER ESTRATÉGIAS
             </button>
           </motion.div>
