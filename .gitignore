@@ -25,3 +25,13 @@ yarn-error.log*
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Build outputs
+dist
+build
+
+# Ignore next.js production builds
+/.next/server/
+/.next/static/chunks/
+/.next/static/css/
+/.next/static/media/

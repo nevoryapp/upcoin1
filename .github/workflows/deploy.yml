@@ -1,42 +1,39 @@
-name: Deploy Lovable via FTP na Hostinger
+name: Deploy to Hostinger
 
 on:
- push:
-  branches:
-   - main
-
+  push:
+    branches: [ main ]
 
 jobs:
-build-and-deploy:
-runs-on: ubuntu-latest
-steps:
-- name: Clonar o repositório
-uses: actions/checkout@v3
-- name: Configurar Node.js 18
-uses: actions/setup-node@v3
-with:
-node-version: '18'
-- name: Instalar dependências
-run: npm install
-- name: Build do projeto
-run: npm run build
-- name: Mostrar arquivos gerados
-run: ls -al dist/
-- name: Deploy FTP para Hostinger
-uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-with:
-server: ${{ secrets.FTP_HOST }}
-port: 21
-username: ${{ secrets.FTP_USER }}
-password: ${{ secrets.FTP_PASS }}
-local-dir: dist/
-server-dir: /
-dangerous-clean-slate: true
-dry-run: false
-log-level: verbose
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x]
+    
+    steps:
+    - uses: actions/checkout@v3
 
-FTP_HOST        exemplo: ftp.seudominio.com
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
 
-FTP_USER        seu usuário FTP
+    - name: Install dependencies
+      run: npm ci
 
-FTP_PASS        sua senha FTP
+    - name: Build
+      run: npm run build
+
+    - name: Create deployment package
+      run: |
+        mkdir -p deployment
+        cp -r .next standalone.js package.json package-lock.json public deployment/
+        cd deployment
+        zip -r ../deployment.zip .
+
+    - name: Deploy to Hostinger
+      run: |
+        echo "Build completed successfully. Upload deployment.zip to Hostinger manually."

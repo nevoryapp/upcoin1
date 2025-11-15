@@ -1,0 +1,16 @@
+{
+  "build": {
+    "env": {
+      "NODE_VERSION": "18"
+    },
+    "commands": [
+      "npm ci",
+      "npm run build"
+    ]
+  },
+  "deploy": {
+    "commands": [
+      "npm start"
+    ]
+  }
+}

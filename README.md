@@ -32,6 +32,7 @@ Para hospedar na Hostinger, faça upload dos seguintes arquivos e pastas:
 - `public/` (contém favicon e outros assets)
 - `package.json`
 - `package-lock.json`
+- `server.js`
 
 ## 🔧 Deploy na Hostinger
 
@@ -39,6 +40,7 @@ Para hospedar na Hostinger, faça upload dos seguintes arquivos e pastas:
 2. Faça upload das pastas e arquivos mencionados acima
 3. Configure o Node.js App na Hostinger apontando para o diretório correto
 4. Defina o comando de inicialização como `npm start`
+5. Instale as dependências com `npm ci --only=production`
 
 ## 🎯 Links importantes
 
@@ -51,3 +53,10 @@ Para hospedar na Hostinger, faça upload dos seguintes arquivos e pastas:
 - React 18
 - Tailwind CSS
 - Framer Motion
+
+## 📞 Suporte
+
+Consulte os arquivos:
+- `HOSTINGER-CONFIG.txt` para instruções detalhadas de configuração
+- `DEPLOY.md` para guia completo de deploy
+- `INSTRUCOES-FINAIS.txt` para passos rápidos

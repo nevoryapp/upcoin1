@@ -1,0 +1,73 @@
+# CONFIGURAÇÃO PARA HOSTINGER - NODE.JS APP
+
+## PASSO 1: Configuração do Node.js App
+
+1. Acesse o Painel de Controle da Hostinger
+2. Vá para "Website" > "Configurações"
+3. Encontre a seção "Node.js App"
+4. Configure os seguintes parâmetros:
+
+   **Application Directory**: /public_html
+   **Application Domain**: seu-dominio.com (substitua pelo seu domínio)
+   **Application Startup File**: server.js
+   **Environment Variables**: 
+     - NODE_ENV=production
+     - PORT=3000
+
+5. Clique em "Create Application"
+
+## PASSO 2: Upload dos Arquivos
+
+Após criar a aplicação, faça upload dos seguintes arquivos para o diretório /public_html:
+
+- package.json
+- package-lock.json
+- server.js
+- .next/ (pasta inteira)
+- public/ (pasta inteira)
+
+## PASSO 3: Instalação das Dependências
+
+1. Acesse o terminal via Hostinger
+2. Navegue até o diretório da aplicação:
+   ```bash
+   cd /public_html
+   ```
+
+3. Instale as dependências:
+   ```bash
+   npm ci --only=production
+   ```
+
+## PASSO 4: Reiniciar a Aplicação
+
+1. No Painel de Controle da Hostinger
+2. Vá para "Website" > "Configurações"
+3. Na seção "Node.js App", clique em "Restart Application"
+
+## PASSO 5: Verificação
+
+1. Acesse seu domínio no navegador
+2. O site deve estar funcionando em https://seu-dominio.com
+
+## PROBLEMAS COMUNS E SOLUÇÕES
+
+### Erro: "Module not found"
+Solução: Certifique-se de que todos os arquivos foram enviados corretamente e execute:
+```bash
+npm ci --only=production
+```
+
+### Erro: "Port already in use"
+Solução: Verifique se a variável de ambiente PORT está definida como 3000
+
+### Site não carrega
+Solução: 
+1. Verifique os logs da aplicação no Painel de Controle
+2. Reinicie a aplicação
+3. Confirme que o arquivo server.js existe e está correto
+
+## LINKS IMPORTANTES
+
+- Link de checkout: https://pay.kiwify.com.br/vIpQ4tB?afid=sQ8RUc5h
+- Favicon: Já incluído na pasta public/
