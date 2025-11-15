@@ -1,17 +1,20 @@
 import '../styles/globals.css';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'UPCOIN: O Segredo das Criptos',
-  description: 'Descubra o segredo das criptomoedas com nosso guia completo',
+  title: 'UPCOIN - O Segredo das Criptos',
+  description: 'Aprenda a investir em criptomoedas do zero com nosso ebook completo',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
+      <body>{children}</body>
     </html>
   );
 }

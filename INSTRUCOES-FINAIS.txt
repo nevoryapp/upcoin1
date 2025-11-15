@@ -1,0 +1,45 @@
+# INSTRUÇÕES FINAIS PARA DEPLOY NA HOSTINGER
+
+## 📦 Arquivo Pronto para Deploy
+
+Você tem um arquivo chamado "upcoin-deploy.zip" que contém todos os arquivos necessários para fazer o deploy na Hostinger.
+
+## 📁 Conteúdo do Arquivo ZIP
+
+O arquivo ZIP contém:
+- .next/ (pasta com a build do site)
+- public/ (pasta com favicon e outros assets)
+- package.json (configurações do projeto)
+- package-lock.json (versões exatas das dependências)
+
+## 🚀 Como Fazer o Deploy
+
+1. **Faça upload do arquivo "upcoin-deploy.zip" para a Hostinger**
+   - Acesse o Painel de Controle da Hostinger
+   - Vá para "Website" > "Gerenciador de Arquivos"
+   - Faça upload do arquivo ZIP
+
+2. **Extraia o arquivo ZIP**
+   - Clique com o botão direito no arquivo ZIP
+   - Selecione "Extrair" ou "Descompactar"
+
+3. **Configure o Node.js App**
+   - Vá para "Website" > "Configurações"
+   - Encontre a seção "Node.js App"
+   - Configure:
+     * Diretório de Aplicação: O diretório onde você extraiu os arquivos
+     * Domínio de Aplicação: Seu domínio
+     * Comando de Inicialização: npm start
+   - Clique em "Criar Aplicação"
+
+4. **Reinicie a aplicação**
+   - Após a configuração, reinicie a aplicação Node.js
+
+## 🎯 Links Importantes
+
+- Link de checkout: https://pay.kiwify.com.br/vIpQ4tB?afid=sQ8RUc5h
+- Favicon: Já incluído no site
+
+## ❓ Precisa de Ajuda?
+
+Se tiver problemas com o deploy, consulte o arquivo "DEPLOY.md" que contém instruções detalhadas.
